@@ -82,7 +82,9 @@ const UI = (() => {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               <span class="hdr-badge" id="cart-badge" style="display:${cartCount>0?'flex':'none'}">${cartCount}</span>
             </button>
-            <button class="btn btn-primary btn-sm" style="margin-left:4px" onclick="UI.openModal('quote-modal')">Order Now</button>
+            <div class="hidden md:flex">
+              <button class="btn btn-primary btn-sm" style="margin-left:4px" onclick="UI.openModal('quote-modal')">Order Now</button>
+            </div>
           </div>
         </div>
       </div>
@@ -91,7 +93,7 @@ const UI = (() => {
           <div class="nav-scroll">
             <div class="nav-item"><span class="nav-link ${state.route.page==='home'?'active':''}" onclick="Store.navigate('home')">🏠 Home</span></div>
             <div class="nav-item">
-              <span class="nav-link ${state.route.page==='shop'?'active':''}">
+              <span class="nav-link ${state.route.page==='shop'?'active':''}" onclick="Store.navigate('shop',{cat:'all'})">
                 🛒 All Products
                 <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
               </span>
@@ -189,8 +191,8 @@ const UI = (() => {
         </div>
       </div>
     </footer>
-    <nav class="mob-nav">
-      <div class="mob-nav-inner">
+    <nav class="mob-nav w-full">
+      <div class="mob-nav-inner w-full">
         <button class="mob-nav-btn ${route.page==='home'?'active':''}" onclick="Store.navigate('home')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
           Home

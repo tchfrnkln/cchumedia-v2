@@ -83,10 +83,10 @@ Pages.Home = (state) => {
   </div>
 
   <!-- MAIN CONTENT -->
-  <div class="container">
-    <div class="main-layout">
+  <div class="container w-screen mt-6" style="margin-top:25px;">
+    <div class="w-full flex gap-2 relative">
       <!-- LEFT SIDEBAR -->
-      <aside class="left-sidebar">
+      <aside class="left-sidebar w-1/5 sticky top-10 self-start">
         <div class="widget">
           <div class="widget-hdr">🗂 Categories</div>
           <div class="widget-body">
@@ -112,7 +112,7 @@ Pages.Home = (state) => {
       </aside>
 
       <!-- MAIN RIGHT -->
-      <main>
+      <main class="w-full md:w-4/5">
         <!-- PROMO BANNERS -->
         <div class="promo-grid">
           <div class="promo-banner pb-1" onclick="Store.navigate('shop',{cat:'banners'})">
@@ -170,20 +170,20 @@ Pages.Home = (state) => {
         </div>
 
         <!-- PROMO 3-GRID -->
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:28px">
-          <div class="promo-banner pb-1" onclick="Store.navigate('kits')" style="min-height:110px">
+        <div class="w-full flex flex-col md:flex-row mb-[28px] gap-3">
+          <div class="promo-banner pb-1 w-full md:w-1/3" onclick="Store.navigate('kits')" style="min-height:110px">
             <div class="promo-bg">🚀</div>
             <div class="promo-title" style="font-size:1rem">Starter Kits</div>
             <div class="promo-sub">From ₦35,000 flat</div>
             <div class="promo-cta" style="font-size:.74rem">View Kits →</div>
           </div>
-          <div class="promo-banner pb-3" onclick="Store.navigate('campaign')" style="min-height:110px">
+          <div class="promo-banner pb-3 w-full md:w-1/3" onclick="Store.navigate('campaign')" style="min-height:110px">
             <div class="promo-bg">🗳️</div>
             <div class="promo-title" style="font-size:1rem">Campaign</div>
             <div class="promo-sub">From ₦50,000</div>
             <div class="promo-cta" style="background:#25d366;font-size:.74rem">Order Now →</div>
           </div>
-          <div class="promo-banner pb-2" onclick="Store.navigate('earn')" style="min-height:110px">
+          <div class="promo-banner pb-2 w-full md:w-1/3" onclick="Store.navigate('earn')" style="min-height:110px">
             <div class="promo-bg">💰</div>
             <div class="promo-title" style="font-size:1rem">Earn 10%</div>
             <div class="promo-sub">Refer & earn forever</div>
@@ -192,7 +192,7 @@ Pages.Home = (state) => {
         </div>
 
         <!-- AFFILIATE BANNER -->
-        <div class="earn-banner">
+        <div class="earn-banner" style="margin-top:25px">
           <div>
             <div class="earn-title">Earn While You Refer 💰</div>
             <div class="earn-sub">Join the C-Chu Media Affiliate Program. Earn commission on every order your referrals place — forever.</div>

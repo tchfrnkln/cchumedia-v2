@@ -194,7 +194,7 @@ input,select,textarea{font-family:inherit}ul,ol{list-style:none}
 
 /* ── HERO ── */
 .hero-wrap{display:grid;grid-template-columns:260px 1fr;min-height:380px;overflow:hidden}
-.hero-sidebar{background:var(--bg-card);border-right:1px solid var(--border);padding:12px 0;display:flex;flex-direction:column;overflow-y:auto;max-height:380px}
+.hero-sidebar{background:var(--bg-card);border-right:1px solid var(--border);padding:12px 0;display:flex;flex-direction:column;overflow-y:auto;}
 .sidebar-hdr{display:flex;align-items:center;gap:7px;padding:0 14px 10px;font-size:.7rem;
   font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);
   border-bottom:1px solid var(--border-soft);margin-bottom:4px;font-family:var(--font-display)}
