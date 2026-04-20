@@ -75,16 +75,18 @@ Pages.Shop = (state) => {
         </div>
       </aside>
       <!-- PRODUCTS -->
-      <main>
-        <div class="cat-chips">
+      <main class="w-screen">
+        <div class="cat-chips w-95 md:w-full overflow-hidden">
           ${CATEGORIES.slice(0,10).map(c=>`<div class="chip ${c.id===cat?'on':''}" onclick="Store.navigate('shop',{cat:'${c.id}'})">${c.icon} ${c.id==='all'?'All':c.label.split(' ')[0]}</div>`).join('')}
         </div>
-        ${products.length ? `<div class="product-grid" id="shop-grid">${products.map(p=>UI.productCard(p)).join('')}</div>` : `
-        <div style="text-align:center;padding:60px 20px;color:var(--text-muted)">
-          <div style="font-size:3rem;margin-bottom:11px">🔍</div>
-          <div style="font-size:1rem;font-weight:700;margin-bottom:7px">No products found</div>
-          <p style="font-size:.86rem">Try a different category or <button class="btn btn-primary btn-sm" onclick="Store.navigate('shop')">browse all</button></p>
-        </div>`}
+        <div class="w-95 md:w-4/5 overflow-hidden">
+          ${products.length ? `<div class="product-grid" id="shop-grid">${products.map(p=>UI.productCard(p)).join('')}</div>` : `
+          <div style="text-align:center;padding:60px 20px;color:var(--text-muted)">
+            <div style="font-size:3rem;margin-bottom:11px">🔍</div>
+            <div style="font-size:1rem;font-weight:700;margin-bottom:7px">No products found</div>
+            <p style="font-size:.86rem">Try a different category or <button class="btn btn-primary btn-sm" onclick="Store.navigate('shop')">browse all</button></p>
+          </div>`}
+        </div>
       </main>
     </div>
   </div>`;
