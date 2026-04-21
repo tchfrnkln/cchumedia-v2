@@ -31,7 +31,7 @@ Pages.Kits = () => `
         turnaround:'5 business days', featured:false },
     ].map(kit => `
     <div class="kit-card ${kit.featured?'featured':''}">
-      ${kit.featured ? `<div style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:var(--brand);color:#fff;padding:4px 14px;border-radius:99px;font-size:.72rem;font-weight:800;font-family:var(--font-display);white-space:nowrap">${kit.badge}</div>` : ''}
+      ${kit.featured ? `<div class="hidden" style="position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:var(--brand);color:#fff;padding:4px 14px;border-radius:99px;font-size:.72rem;font-weight:800;font-family:var(--font-display);white-space:nowrap">${kit.badge}</div>` : ''}
       <div class="kit-hdr" style="background:${kit.featured?'linear-gradient(135deg,var(--brand),var(--brand-dark))':kit.color==='var(--accent)'?'linear-gradient(135deg,#5a5da0,#7B7EC8)':'linear-gradient(135deg,#0c0c18,#1a0606)'};color:#fff">
         <div style="font-family:var(--font-display);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:6px">${kit.badge}</div>
         <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:900">${kit.name}</div>
