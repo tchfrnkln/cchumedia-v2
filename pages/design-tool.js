@@ -19,7 +19,7 @@ Pages.DesignTool = (state) => {
         <button class="btn btn-ghost btn-sm" onclick="dtRedo()">↪ Redo</button>
         <button class="btn btn-ghost btn-sm" onclick="dtSave()">💾 Save</button>
         <button class="btn btn-outline btn-sm" onclick="dtExportPNG()">⬇ PNG</button>
-        <button class="btn btn-primary btn-sm" onclick="dtSendToPrint()">🖨 Send to Print</button>
+        <!-- <button class="btn btn-primary btn-sm hidden" onclick="dtSendToPrint()">🖨 Send to Print</button> -->
       </div>
     </div>
   </div>
@@ -159,7 +159,7 @@ Pages.DesignTool = (state) => {
         <button class="btn btn-ghost btn-sm" onclick="dtExportPNG()">⬇ Download PNG</button>
         <button class="btn btn-ghost btn-sm" onclick="dtExportJPEG()">⬇ Download JPEG</button>
         <button class="btn btn-ghost btn-sm" onclick="dtSave()">💾 Save Design</button>
-        <button class="btn btn-primary btn-sm" onclick="dtSendToPrint()">🖨 Send to Print</button>
+        <!-- <button class="btn btn-primary btn-sm" onclick="dtSendToPrint()">🖨 Send to Print</button> -->
       </div>
     </div>
   </div>`;

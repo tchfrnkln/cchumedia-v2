@@ -35,12 +35,12 @@ const UI = (() => {
     const { user, cart, theme } = state;
     const cartCount = cart.length;
     el.innerHTML = `
-    <div id="ann-bar">
+    <div id="ann-bar" class="hidden">
       🎉 <strong>Flash Sale:</strong> 20% off all Banner orders · Use code <strong>BANNER20</strong>
       <a href="#" onclick="Store.navigate('kits')"> Starter Kits →</a>
       <button id="ann-close" onclick="this.closest('#ann-bar').style.display='none'">×</button>
     </div>
-    <header id="site-header">
+    <header id="site-header" class="hidden">
       <div class="container">
         <div class="header-inner">
           <div class="logo" onclick="Store.navigate('home')">
